@@ -1,39 +1,272 @@
+/* MUST REMAIN AT THE VERY TOP OF THE FILE */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
-  margin: 0;
+  background-color: #f7f9fa;
 }
 
-.Container {
-  background-color: #4B6477B0;
-  display: flex; 
-  min-height: 100vh;
-}
-
-.Right {
-  background-color: #4B6477B0;
+.signup-container {
   display: flex;
-  flex-direction: column; 
-  padding: 25px 15px;
-  width: 50%;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-.Corner-img {
-  width: 135px;
-  height: 117px;
+/* Sidebar Section */
+.sidebar {
+  flex: 0 0 38%;
+  background-color: #10333c;
+  color: white;
+  padding: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.Corner-img img {
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 60px;
+}
+
+.logo-graphic {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
-  display: block;
 }
 
-.Introduction {
-  margin-top: 20px;
+.sidebar-heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  z-index: 2;
 }
 
-.Left {
-  width: 50%;
-  padding: 25px 15px;
+/* Graphic Overlay Environment */
+.artwork-container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.hero-artwork {
+  width: 90%;
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  object-fit: contain;
+}
+
+.corner-artwork {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 100;
+  width: 100%;
+  opacity: 1;
+}
+
+/* Form Window Panel */
+.form-section {
+  flex: 1;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.language-selector {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #000000;
+  font-weight: 500;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 480px;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #000000;
+}
+
+/* Social Framework Row */
+.social-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e5ecee;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #444;
+  transition: background-color 0.2s;
+}
+
+.social-btn:hover {
+  background-color: #fafbfc;
+}
+
+.provider-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Split Line Style Component */
+.divider {
+  text-align: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #e5ecee;
+  z-index: 1;
+}
+
+.divider span {
+  background-color: white;
+  padding: 0 15px;
+  color: #a6b5b8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+/* Form Interactive Controls */
+.input-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid #e5ecee;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  color: #000000;
+}
+
+.input-group input::placeholder {
+  color: #a6b5b8;
+}
+
+.input-group input:focus {
+  border-bottom-color: #173d47;
+}
+
+.password-group .input-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Structural Layout Form Button Controls */
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: #173d47;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+  opacity: 0.95;
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #a6b5b8;
+}
+
+.login-link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Medium viewport media rules */
+@media (max-width: 950px) {
+  .signup-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex: none;
+    padding: 40px 20px;
+  }
+  .sidebar-heading {
+    font-size: 1.8rem;
+  }
+  .artwork-container {
+    display: none;
+  }
+  .form-section {
+    padding: 60px 20px;
+  }
+  .language-selector {
+    top: 20px;
+    right: 20px;
+  }
 }

@@ -1,73 +1,80 @@
+import React from 'react';
 import './App.css';
-import Corner from "./assets/Corner-img.png"
-import abstraction from "./assets/Abstraction.png" 
-import Google from "./assets/Google.png"
-import Facebook from "./assets/Facebook.png"
-import lock from "./assets/lock.png"
-const App = () => (
-  <div className = "Container">
-    <div className = "Right">
-      <div className = "Corner-img">
-        <img src = {Corner} alt = "Logo"/>
-      </div>
-      <div className = "Introduction">
-        <h1>Getting Started With VR Creation</h1>
-      </div>
-      <div className = "Site-img">
-        <img src = {abstraction} alt = "web-logo" />
-      </div>
-    </div>
-    <div className = "Left">
-      <div className = "language">
-        <select>
-          <option value = "English">English</option>
-        </select>
-      </div>
-      <div className = "Create">
-        <h2>Create Account</h2>
-      </div>
-      <div className = "Form">
-        <form>
-          <div className = "Button-container">
-            <div className = "Sign-Up-With-Google">
-              <button>
-                <img src = {Google} alt = "google"/>
-                <span>Sign up with Google</span>
-              </button>
-            </div>
-            <div className = "Sign-Up-With-Facebook">
-              <button>
-                <img src = {Facebook} alt = "facebook"/>
-                <span>Sign up with Facebook</span>
-              </button>
-            </div>
-          </div>
-          <div className = "alternative-sign-up">
-            <h3>- OR -</h3>
-          </div>
-          <div className = "Input">
-            <input type = "text" name = "Name"  placeholder="Full Name "></input>
-            <input type = "Email" name = "email"  placeholder = "Email"></input>
-            <input type = "Password" name = "pass" placeholder = "Password"></input>
-          </div>
-          <div className = "lock">
-            <img src = {lock} alt = "lock"/>
-          </div>
-          <div className = "Create-Account">
-            <button type = "submit">Create Account</button>
-          </div>
-          <div className = "Log-in">
-            <div className = "grey-text">
-              <p1>Already have an account?</p1>
-            </div>
-            <div className = "blue-text">
-              <p2>Log In</p2>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-);
 
-export default App;
+// Import images directly from your src/assets directory
+import abstractionImg from './assets/Abstraction.png';
+import cornerImg from './assets/Corner-img.png';
+import Facebook from './assets/Facebook.png';
+import Google from './assets/Google.png';
+import lock from './assets/lock.png';
+
+export default function App() {
+  return (
+    <div className="signup-container">
+      {/* Left Sidebar */}
+      <aside className="sidebar">
+        <div className="logo-area">
+          <div className="logo-icon">
+            <img src={cornerImg} alt="Logo Element" className="logo-graphic" />
+          </div>
+        </div>
+        <h1 className="sidebar-heading">
+          Getting Started With <br/>
+          VR Creation
+        </h1>
+        <div className="artwork-container">
+          <img src={abstractionImg} alt="Decorative Edge" className="corner-artwork" />
+        </div>
+      </aside>
+
+      {/* Right Form Area */}
+      <div className="form-section">
+        <header className="language-selector">
+          <button className="lang-btn">English (UK) <span className="arrow">▾</span></button>
+        </header>
+
+        <div className="form-card">
+          <h2 className="form-title">Create Account</h2>
+
+          {/* Social Sign Up Options */}
+          <div className="social-row">
+            <button className="social-btn">
+              <img src={Google} alt="Google" className="provider-icon" /> Signup with Google
+            </button>
+            <button className="social-btn">
+              <img src={Facebook} alt="Facebook" className="provider-icon" /> Signup with Facebook
+            </button>
+          </div>
+
+          <div className="divider">
+            <span>- OR -</span>
+          </div>
+
+          {/* Registration Input Form */}
+          <form onSubmit={(e) => e.preventDefault()}> {/* prevents website from reloading */}
+            <div className="input-group">
+              <input type="text" id="fullName" placeholder="Full Name" required />
+            </div>
+
+            <div className="input-group">
+              <input type="email" id="email" placeholder="Email" required />
+            </div>
+
+            <div className="input-group password-group">
+              <input type="password" id="password" placeholder="Password" required />
+              <img src={lock} alt="Lock" className="input-icon" />
+            </div>
+
+            <button type="submit" className="submit-btn">
+              Create Account
+            </button>
+          </form>
+
+          <p className="footer-text">
+            Already have an account? <a href="#" className="login-link">Log in</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
