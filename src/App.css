@@ -30,10 +30,16 @@ body {
   flex-direction: column;
 }
 
+.logo-area {
+  flex: 0 0 110px;
+}
+
 .logo-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 135px;
+  height: 117px;
 }
 
 .logo-graphic {
@@ -43,7 +49,7 @@ body {
 }
 
 .sidebar-heading {
-  font-size: 2.4rem;
+  font-size: 45px;
   font-weight: 600;
   line-height: 1.3;
   z-index: 2;
@@ -52,27 +58,19 @@ body {
 /* Graphic Overlay Environment */
 .artwork-container {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 630.4908957850762px;
+  height: 673.9712417767477px;
+  left: 10%;
+  bottom: -20px;
   pointer-events: none;
   z-index: 4;
 }
 
-.hero-artwork {
-  width: 90%;
-  position: absolute;
-  bottom: 20px;
-  left: 5%;
-  object-fit: contain;
-}
-
-.corner-artwork {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 100;
+.abstract-artwork {
+  display: block;
   width: 100%;
-  opacity: 1;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Form Window Panel */
@@ -95,7 +93,7 @@ body {
 .lang-btn {
   background: none;
   border: none;
-  font-size: 0.85rem;
+  font-size: 10px;
   cursor: pointer;
   color: #000000;
   font-weight: 500;
@@ -107,7 +105,7 @@ body {
 }
 
 .form-title {
-  font-size: 1.8rem;
+  font-size: 30px;
   font-weight: 700;
   margin-bottom: 35px;
   color: #000000;
@@ -130,15 +128,14 @@ body {
   border: 1px solid #e5ecee;
   border-radius: 8px;
   background-color: white;
-  font-size: 0.85rem;
+  font-size: 10px;
   font-weight: 500;
   cursor: pointer;
   color: #444;
-  transition: background-color 0.2s;
 }
 
 .social-btn:hover {
-  background-color: #fafbfc;
+  background-color: #7b8085;
 }
 
 .provider-icon {
@@ -152,17 +149,6 @@ body {
   text-align: center;
   margin: 30px 0;
   position: relative;
-}
-
-.divider::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 1px;
-  background-color: #e5ecee;
-  z-index: 1;
 }
 
 .divider span {
@@ -204,7 +190,6 @@ body {
   position: absolute;
   right: 5px;
   top: 50%;
-  transform: translateY(-50%);
   width: 16px;
   height: 16px;
   opacity: 0.5;
@@ -219,11 +204,10 @@ body {
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 25px;
   font-weight: 500;
   cursor: pointer;
   margin-top: 15px;
-  transition: opacity 0.2s;
 }
 
 .submit-btn:hover {
