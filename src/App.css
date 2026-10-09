@@ -214,6 +214,24 @@ body {
   opacity: 0.95;
 }
 
+.submit-btn:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.form-message {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+}
+
+.form-error {
+  color: #b42318;
+}
+
+.form-success {
+  color: #167447;
+}
+
 .footer-text {
   text-align: center;
   margin-top: 25px;
