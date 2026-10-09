@@ -1,7 +1,6 @@
 // Steven Gonell
 // 10/8/2026
 // React sign up page
-import React from 'react';
 import './App.css';
 
 
@@ -10,18 +9,8 @@ import cornerImg from './assets/Corner-img.png';
 import Facebook from './assets/Facebook.png';
 import Google from './assets/Google.png';
 import lock from './assets/lock.png';
-// Linking the .jsx input to the supabase-js file
-import { createClient } from '@supabase/supabase-js'
-
 // Variables
 // This was my first time working with javascript, did google alot so if my comprehension of whats being done isn't exactly up to par, please cut me some slack
-
-const supabaseUrl = 'https://supabase.co'
-const supabaseAPI = 'sb_publishable_ACJWlzQHlZjBrEguHvfOxg_3BJgxAaH' // this is the public API, so should cause no issues(i hope)
-const supabase = createClient(supabaseUrl, supabaseKey)
-
-
-const form = document.querySelector()
 
 export default function App() {
   return (
@@ -68,7 +57,7 @@ export default function App() {
           {/* Registration Input Form */}
           <form onSubmit={(e) => e.preventDefault()}> {/* prevents website from reloading */}
             <div className="input-group">
-              <input type="text" id="fullName" placeholder="Full Name" {/*this is a constraint so you cant submit if this isn't filled */}required />
+              <input type="text" id="fullName" placeholder="Full Name" required />
             </div>
 
             <div className="input-group">
