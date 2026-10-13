@@ -62,7 +62,6 @@ body {
   height: 673.9712417767477px;
   left: 10%;
   bottom: -20px;
-  pointer-events: none;
   z-index: 4;
 }
 
@@ -193,7 +192,6 @@ body {
   width: 16px;
   height: 16px;
   opacity: 0.5;
-  pointer-events: none;
 }
 
 /* Structural Layout Form Button Controls */
@@ -240,9 +238,14 @@ body {
 }
 
 .login-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
   color: #000000;
   text-decoration: none;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .login-link:hover {
